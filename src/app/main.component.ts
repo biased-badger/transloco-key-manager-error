@@ -5,7 +5,8 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 	template: `
 		<p>Main component</p>
 		<a routerLink="lazy">Lazy component</a>
+		
 	`,
-	changeDetection: ChangeDetectionStrategy.OnPush
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MainComponent {}

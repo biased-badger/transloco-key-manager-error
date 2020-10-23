@@ -1,3 +1,5 @@
-<h2>Lazy title</h2>
-<p>Lazy text</p>
-<pre>{{ greeting }}</pre>
+<ng-container *transloco="let t; read: 'lazy-module'">
+	<h2>{{ t('Lazy title') }}</h2>
+	<p>{{ t('Lazy text') }}</p>
+	<pre>{{ greeting }}</pre>
+</ng-container>

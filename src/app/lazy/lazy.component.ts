@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { TranslocoService } from "@ngneat/transloco";
 
 @Component({
 	selector: 'app-lazy',
@@ -6,5 +7,8 @@ import { ChangeDetectionStrategy, Component } from "@angular/core";
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LazyComponent {
-	greeting = 'Hello from lazy component';
+	greeting = this.lang.translate('Hello from lazy component', null, 'lazy-module');
+
+	constructor(private lang: TranslocoService) {
+	}
 }
